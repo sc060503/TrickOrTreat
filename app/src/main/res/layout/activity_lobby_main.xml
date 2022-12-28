@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lobby_background"
+    tools:context=".LobbyMainActivity">
+
+    <Button
+        android:id="@+id/btnOption"
+        android:layout_width="114dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/lobby_option"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnHelp"
+        android:layout_width="114dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/lobby_guide"
+        app:layout_constraintEnd_toStartOf="@+id/btnOption"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/btnMode"
+        android:layout_width="114dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/on_off"
+        android:checked="false"
+        android:onClick="viewGo"
+        android:textOff=" "
+        android:textOn=" "
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rdoGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toEndOf="@+id/btnMode">
+
+        <RadioButton
+            android:id="@+id/rdoEasy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="쉬움" />
+
+        <RadioButton
+            android:id="@+id/rdoNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="보통" />
+
+        <RadioButton
+            android:id="@+id/rdoHard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="어려움" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="114dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/lobby_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnRanking"
+        android:layout_width="114dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/lobby_ranking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOption" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="150dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lobby_logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameMainActivity">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/myGLView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-140dp" />
+
+    <Button
+        android:id="@+id/minus10"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/minus10"
+        android:onClick="Num"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/minus1" />
+
+    <Button
+        android:id="@+id/btnAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/plus1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/minus1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/minus1"
+        android:onClick="Num"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMyNum"
+        android:layout_width="123dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="88dp"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/plus10"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/plus10"
+        android:onClick="Num"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/plus1" />
+
+    <Button
+        android:id="@+id/plus1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/plus1"
+        android:onClick="Num"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/timer"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="385dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:max="20000"
+        android:progress="20000"
+        android:progressDrawable="@drawable/progressbar_progressbar1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

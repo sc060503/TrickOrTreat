@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lobby_background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lobby_logo" />
+
+    <Button
+        android:id="@+id/btnJoin"
+        android:layout_width="114dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/join_img"
+        app:layout_constraintBottom_toTopOf="@+id/txtFind"
+        app:layout_constraintEnd_toStartOf="@+id/btnLogin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="114dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/login"
+        app:layout_constraintBottom_toTopOf="@+id/txtFind"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnJoin" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="114dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/logout"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/txtFind"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnLobby" />
+
+    <TextView
+        android:id="@+id/txtFind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="ID/Password 찾기"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnLobby"
+        android:layout_width="114dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/lobby"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/txtFind"
+        app:layout_constraintEnd_toStartOf="@+id/btnLogout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
